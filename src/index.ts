@@ -11,9 +11,9 @@ interface block{
 }
 class block implements block{
     constructor(
-        prevhash:string,
-        height:number,
-        data:string
+        public prevhash:string,
+        public height:number,
+        public data:string
     ){this.hash=block.cal(prevhash,height,data)}
     static cal(prevhash:string,height:number,data:string){
         const str=`${prevhash}${height}${data}`
@@ -43,4 +43,4 @@ class blockchain {
 const newChain = new blockchain
 newChain.addblock('first')
 newChain.addblock('second')
-console.log(newChain.getchain)
+console.log(newChain.getchain())

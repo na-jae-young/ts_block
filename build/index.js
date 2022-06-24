@@ -1,1 +1,3 @@
-const hello = () => 'hello';
+"use strict";
+function f() { return 'hello'; }
+console.log(f());
